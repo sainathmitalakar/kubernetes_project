@@ -1,0 +1,15 @@
+ kind: Service
+ apiVersion: v1
+ metadata:
+   name: mrDevops
+   labels: 
+      app: mrDevops
+ spec:
+   ports:
+     - port: 8080
+       targetport: 80
+       nodeport: 31200
+   selector:
+     app: mrDevops
+   type: Loadbalancer
+
